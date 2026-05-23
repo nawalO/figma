@@ -1,0 +1,306 @@
+{
+  "components": [
+    {
+      "name": "SearchBar",
+      "dimensions": {
+        "width": 343,
+        "height": 48
+      },
+      "properties": {
+        "background": "#161B22",
+        "border": "1px #30363D",
+        "borderRadius": 8,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12
+      },
+      "elements": [
+        {
+          "name": "Background",
+          "type": "Rectangle",
+          "fill": "#161B22"
+        },
+        {
+          "name": "Icon",
+          "type": "SVG",
+          "size": 20,
+          "position": "left",
+          "color": "#8B949E"
+        },
+        {
+          "name": "Input Text",
+          "type": "Text",
+          "content": "Movies, shows and more",
+          "fontSize": 14,
+          "color": "#8B949E",
+          "fontWeight": 400
+        }
+      ],
+      "states": [
+        {
+          "name": "Default",
+          "properties": {
+            "border": "1px #30363D"
+          }
+        },
+        {
+          "name": "Focused",
+          "properties": {
+            "border": "2px #58A6FF"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CategoryButton",
+      "dimensions": {
+        "width": "auto",
+        "height": 36
+      },
+      "properties": {
+        "borderRadius": 20,
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+        "fontSize": 14,
+        "fontWeight": 500
+      },
+      "states": [
+        {
+          "name": "Active",
+          "properties": {
+            "background": "#0969DA",
+            "textColor": "#FFFFFF"
+          }
+        },
+        {
+          "name": "Default",
+          "properties": {
+            "background": "#21262D",
+            "border": "1px #30363D",
+            "textColor": "#FFFFFF"
+          }
+        },
+        {
+          "name": "Hover",
+          "properties": {
+            "background": "#30363D",
+            "textColor": "#FFFFFF"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SectionHeader",
+      "properties": {
+        "layout": "Flex Row, space-between",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+        "fontSize": 20,
+        "fontWeight": 600,
+        "textColor": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "name": "Title",
+          "type": "Text",
+          "fontSize": 20,
+          "fontWeight": 600
+        },
+        {
+          "name": "Chevron",
+          "type": "SVG",
+          "size": 20,
+          "position": "right",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "name": "BrandCard",
+      "dimensions": {
+        "width": 157,
+        "height": 88
+      },
+      "properties": {
+        "background": "#21262D",
+        "border": "1px #30363D",
+        "borderRadius": 12,
+        "layout": "Flex Column, center"
+      },
+      "elements": [
+        {
+          "name": "Background",
+          "type": "Rectangle"
+        },
+        {
+          "name": "Icon",
+          "type": "SVG",
+          "size": 40,
+          "color": "#FFFFFF"
+        }
+      ],
+      "states": [
+        {
+          "name": "Default",
+          "properties": {
+            "background": "#21262D"
+          }
+        },
+        {
+          "name": "Hover",
+          "properties": {
+            "background": "#30363D",
+            "iconColor": "#58A6FF",
+            "scale": 1.05,
+            "shadow": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MoviePoster",
+      "dimensions": {
+        "width": 157,
+        "height": 220
+      },
+      "properties": {
+        "borderRadius": 8,
+        "aspectRatio": 0.71
+      },
+      "elements": [
+        {
+          "name": "Image",
+          "type": "Image",
+          "dimensions": {
+            "width": 157,
+            "height": 220
+          }
+        },
+        {
+          "name": "Overlay",
+          "type": "Rectangle",
+          "background": "rgba(0,0,0,0.6)",
+          "hidden": true
+        }
+      ],
+      "states": [
+        {
+          "name": "Default",
+          "properties": {
+            "overlayHidden": true
+          }
+        },
+        {
+          "name": "Hover",
+          "properties": {
+            "overlayHidden": false,
+            "scale": 1.05,
+            "shadow": "medium"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BottomNavigation",
+      "dimensions": {
+        "width": 393,
+        "height": 56
+      },
+      "properties": {
+        "background": "#0B1117",
+        "borderTop": "1px #30363D",
+        "layout": "Flex Row, space-around",
+        "position": "Fixed Bottom"
+      },
+      "items": [
+        {
+          "name": "Home",
+          "icon": "home",
+          "label": "Home",
+          "active": true
+        },
+        {
+          "name": "Search",
+          "icon": "search",
+          "label": "Search",
+          "active": false
+        },
+        {
+          "name": "Downloads",
+          "icon": "download",
+          "label": "Downloads",
+          "active": false
+        },
+        {
+          "name": "Profile",
+          "icon": "person",
+          "label": "Profile",
+          "active": false
+        }
+      ],
+      "itemProperties": {
+        "dimensions": "auto × 56px",
+        "iconSize": 24,
+        "labelFontSize": 12,
+        "activeColor": "#58A6FF",
+        "inactiveColor": "#8B949E"
+      }
+    }
+  ],
+  "frame": {
+    "name": "DisneyPlusMobileHome",
+    "dimensions": {
+      "width": 393,
+      "height": 852
+    },
+    "safeArea": {
+      "top": 11,
+      "bottom": 34
+    },
+    "contentWidth": 361,
+    "theme": "Dark Mode",
+    "sections": [
+      {
+        "name": "StatusBar",
+        "height": 47
+      },
+      {
+        "name": "SearchSection",
+        "height": 64,
+        "padding": 16
+      },
+      {
+        "name": "CategoryFilterSection",
+        "height": "auto",
+        "layout": "Horizontal Scroll"
+      },
+      {
+        "name": "ExploreByBrandSection",
+        "height": "auto",
+        "grid": "2 columns"
+      },
+      {
+        "name": "TrendingSection",
+        "height": "auto",
+        "grid": "2 columns × 3 rows"
+      },
+      {
+        "name": "BottomNavigation",
+        "height": 56,
+        "position": "Fixed"
+      }
+    ]
+  },
+  "namingConvention": "[Type] ComponentName / Variant",
+  "examples": [
+    "[Frame] DisneyPlusMobileHome",
+    "[Component] SearchBar / Default",
+    "[Component] SearchBar / Focused",
+    "[Component] CategoryButton / Active",
+    "[Component] CategoryButton / Default",
+    "[Component] CategoryButton / Hover",
+    "[Component] BrandCard / Default",
+    "[Component] BrandCard / Hover",
+    "[Component] MoviePoster / Default",
+    "[Component] MoviePoster / Hover"
+  ]
+}
